@@ -1,0 +1,178 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFDFA;
+}
+
+.topbar{
+    display:flex;
+    justify-content: center;
+    gap:100px;
+    height:40px;
+    padding:10px;
+    background: #f3e2c7;
+    background: -moz-linear-gradient(top, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%);
+    align-items: center;
+    position: fixed;
+    top:0px;
+    width:100%;
+    border: 2px solid grey;
+}
+
+.dashboardcontainer{
+    padding:20px;
+    background-color:tan;
+    height: 100%;
+}
+
+.eachapp{
+    margin:20px 0px;
+    display:flex;
+    justify-content: space-around;
+    outline: 2px solid black;
+    padding:20px;
+    background-color: antiquewhite;
+    align-items: center;
+}
+.eachapp button{
+    background-color: red;
+    padding:5px 10px;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+
+
+
+.topbar a{
+    font-size: 30px;
+    -webkit-text-stroke: 1px black;
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+}
+
+
+.reserve, .login{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+}
+
+.middlehome{
+    margin:30px;
+    margin-top:70px;
+    display:flex;
+    align-items: center;
+    text-align: center;
+}
+.mainimg{
+    margin-left:200px;
+    margin-top:70px;
+    margin-bottom:30px;
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    outline: 2px solid black;
+}
+.mainname{
+    margin-bottom:30px;
+    font-size: 40px;
+    margin-right:200px;
+}
+
+.mainpara{
+    font-size:20px;
+    margin-right:200px;
+}
+.leftcolumn{
+    display:flex;
+    flex:1;
+}
+.rightcolumn{
+    display: flex;
+    flex-direction: column;
+    flex:2;
+}
+h1{
+    color:white;
+}
+
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.clientheader{
+    font-size:30px;
+    margin:20px;
+}
+
+.clientrows{
+    margin:20px;
+    display:flex;
+    justify-content: space-around;
+}
+.clients{
+    height:300px;
+    width:300px;
+}
+
+.regform{
+    margin-top:100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+
+.reserveform{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.reserveform input{
+    width:300px;
+    height:50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*LOGGIN PAGE*/
+
+
+.loginn{
+    margin-top:70px;
+    color:black;
+}
+
+.bottomtext{
+    text-align: center;
+    margin-top:10px;
+    gap:10px;
+}
+
+.reviewbutton{
+    margin-top:60px;
+    margin-left:20px;
+    padding: 10px 5px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.item_row{
+    display:flex;
+    justify-content: space-around;
+    padding:20px;
+    outline:2px dotted grey;
+}

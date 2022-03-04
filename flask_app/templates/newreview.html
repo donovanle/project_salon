@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div>
+        <div class="topbar">
+            <a href="/"><h1>Bri's Salon</h1></a>
+            <a href="/reserve" class="reserve">Reserve</a>
+            <a href="/reviews" class="reserve">Reviews</a>
+            <a href="/login" class="login">Login</a>
+        </div>
+        <div class="regform">
+            <form action="/createreview" method="post" class="reserveform">
+                <input type="text" name="name" placeholder="Name:">
+                <label for="rating">* Please rate from 0-5</label>
+                <input type="number" name="rating" id="rating" placeholder="Rating:">
+                <textarea name="description" id="" cols="30" rows="10">Description:</textarea>
+                <label for="appoitment_id">* Please Provide Appointment ID Below</label>
+                <input type="number" name="appoitment_id" placeholder="Appointment ID:">
+                <input type="submit" value="submit" placeholder="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

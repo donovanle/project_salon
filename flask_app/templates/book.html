@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="topbar">
+            <a href="/"><h1>Bri's Salon</h1></a>
+            <a href="/reserve" class="reserve">Reserve</a>
+            <a href="/reviews" class="reserve">Reviews</a>
+            <a href="/login" class="login">Login</a>
+        </div>
+        <div class="regform">
+            <h2>Reserve</h2>
+            <form action="/reservenow" method="post" class="reserveform">
+                <input type="text" placeholder="Name" name="name">
+                <input type="email" placeholder="Email" name="email">
+                <input type="date" name="date" id="date">
+                <select name="product_id" id="product">
+                {% for product in product_list %}
+                    <option value="{{product.id}}">{{product.category}}, {{product.name}}, ${{product.price}}</option>
+                {% endfor %}
+                </select>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <div class="bottomtext">
+            <h3>Open: Monday - Friday</h3>
+            <h4>Hours: 8:00am - 6:30pm</h4>
+            <p>After Reserving an Appointment you will recive a confirmation email within 4-24 hours </p>
+        </div>
+    </div>
+</body>
+</html>

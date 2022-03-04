@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div>
+        <button onclick="location.href='/dashboard'" type="button">Dashboard</button>
+        <div>
+            <h2>new product</h2>
+            <form action="/addproduct" method="post">
+                <input type="hidden" name="users_id" value="3">
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+                <label for="price">Price:</label>
+                <input type="text" name="price">
+                <label for="time">Time:</label>
+                <input type="text" name="time">
+                <label for="category">Category:</label>
+                <input type="text" name="category">
+                <input type="submit" value="Add Product">
+            </form>
+        </div>
+        <div>
+            <h3>All Products:</h3>
+            {% for item in products_list %}
+            <div class="item_row">
+                <p>ID #: {{item.id}}</p>
+                <p>Name: {{item.name}}</p>
+                <p>Price: ${{item.price}}</p>
+                <p>Time: {{item.time}}</p>
+                <p>Category: {{item.category}}</p>
+                <button onclick="location.href='/deleteprod/{{item.id}}'" type="button">Delete</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="topbar">
+            <a href="/"><h1>Bri's Salon</h1></a>
+            <a href="/reserve" class="reserve">Reserve</a>
+            <a href="/reviews" class="reserve">Reviews</a>
+            <a href="/login" class="login">Login</a>
+        </div>
+    </div>
+    <div class="loginn">
+        <form action="/loggedin" method="post" class="logform">
+            <h2>Login</h2>
+            {% with messages = get_flashed_messages(category_filter=['login']) %}   
+                {% if messages %}                            
+                    {% for message in messages %}            
+                        <p class=>{{message}}</p>                  
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <label for="email">Email:</label>
+            <input name="email" type="text">
+            <label for="password">Password:</label>
+            <input name="password" type="password">
+            <input type="submit" value="login">
+        </form>
+    </div>
+</body>
+</html>
